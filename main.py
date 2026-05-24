@@ -12,7 +12,8 @@ def main():
         print(lang["cli_usage"])
         sys.exit(1)
 
-    cmd = sys.argv.lower()
+    # CORRECTION EXACTE : Extraction de la chaîne de caractères à l'index 1
+    cmd = sys.argv[1].lower()
     target_dir = "build_pkg"
 
     if cmd == "build":
@@ -22,12 +23,13 @@ def main():
     elif cmd == "export-pkg":
         success, msg = SafetyValidator.validate_structure(target_dir, lang)
         print(msg)
-        if not success: sys.exit(1)
+        if not success: 
+            sys.exit(1)
     elif cmd == "test-lang":
         print("🌍 Translation Matrix :")
         for lang_id, name in [(0, "English"), (1, "Français"), (2, "Español")]:
             strings = LanguageManager.get_strings(lang_id)
-            print(f" -> PS3 ({name:8}) : '{strings['enable_hen']}' [{strings['btn_on']}]")
+            print(f" -> PS3 ({name:8}) : '{strings['title']}' | '{strings['enable_hen']}' [{strings['btn_on']}]")
     else:
         print(f"{lang['err_unknown']} {cmd}")
         print(lang["cli_usage"])
