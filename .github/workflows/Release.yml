@@ -33,7 +33,7 @@ jobs:
         cd ..
 
     - name: 🚀 Create GitHub Release & Upload Asset
-      uses: softprops/action-archive-release@v2
+      uses: softprops/action-gh-release@v2
       with:
         files: AutoHEN_Settings_HFW4xx_Ready.zip
       env:
