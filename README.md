@@ -6,6 +6,18 @@ A professional, user-space Python toolkit that safely generates PlayStation 3 (P
 
 ---
 
+## ⚠️ Disclaimer (Clause de non-responsabilité)
+
+**ENGLISH:**  
+This project is an independent educational tool designed exclusively for user-space customization on PlayStation 3 systems running HEN. It does **not** modify, patch, or alter the PS3 core firmware, flash memory (`dev_flash`), or system files. 
+The software is provided "as is", without warranty of any kind. The authors and contributors are not responsible for any console bans, data loss, hardware freezes, or accidental damage resulting from the use or misuse of this toolkit. Use at your own risk.
+
+**FRANÇAIS :**  
+Ce projet est un outil éducatif indépendant conçu exclusivement pour la personnalisation en espace utilisateur (*user-space*) des systèmes PS3 avec HEN. Il **ne modifie pas**, ne patch pas et n'altère en aucun cas le micrologiciel officiel, la mémoire flash (`dev_flash`) ou les fichiers système de la console. 
+Le logiciel est fourni "tel quel", sans aucune garantie. Les auteurs et contributeurs déclinent toute responsabilité en cas de bannissement du PSN, perte de données, gels matériels ou dommages accidentels résultant de l'utilisation de cette boîte à outils. Vous l'utilisez à vos propres risques.
+
+---
+
 ## 🎯 Main Purpose
 
 **AutoHEN Settings** is a safe, reversible user-space application that removes the need for clicking the manual "Enable HEN" button on boot. 
