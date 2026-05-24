@@ -1,0 +1,40 @@
+name: 📦 AutoEnabler HEN Production Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Code Checkout
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 🏗️ Build Package Structure
+      run: |
+        python main.py build
+
+    - name: 🔒 Validate User-Space Security
+      run: |
+        python main.py export-pkg
+
+    - name: 🗜️ Compress PS3 Build Folder
+      run: |
+        cd build_pkg
+        zip -r ../AutoHEN_Settings_HFW4xx_Ready.zip ./*
+        cd ..
+
+    - name: 🚀 Create GitHub Release & Upload Asset
+      uses: softprops/action-archive-release@v2
+      with:
+        files: AutoHEN_Settings_HFW4xx_Ready.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
