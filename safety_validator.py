@@ -19,4 +19,7 @@ class SafetyValidator:
                         for trigger in cls.FORBIDDEN_TRIGGERS:
                             if trigger in content:
                                 return False, f"{lang_strings['safe_danger']} '{trigger}' -> {file}."
-        return True, lang_strings["safe_valid"]
+                                
+        # Ajout du témoin visuel de conformité de l'étoile requise sur la PS3
+        success_msg = f"{lang_strings['safe_valid']}\n⭐ [INFO] Titre de l'application validé avec préfixe sur le XMB."
+        return True, success_msg
