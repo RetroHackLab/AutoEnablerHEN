@@ -20,6 +20,7 @@ class ConfigGenerator:
             
         lines = [
             "[AutoHEN_Settings]", 
+            "# TARGET PLATFORM: PS3 HFW 4.xx ONLY (Hybrid Firmware Required)",
             "# Language: -1 = PS3 System Native, 0 = Force English Only",
             "# User-space only architecture - 100% Safe"
         ]
