@@ -1,6 +1,6 @@
 # ⚡ AutoEnabler HEN — Toolkit & AutoHEN Settings
 
-![AutoHEN XMB Wave](https://i.makeagif.com/media/3-22-2023/pjEmH-.gif)
+![AutoHEN XMB Wave](https://www.picgifs.com/games-gifs/games-gifs/console-playstation-3/picgifs-console-playstation-3-6129901.gif)
 
 A professional, user-space Python toolkit that safely generates PlayStation 3 (PS3) HEN configuration files and homebrew PKG installer structures. 🎮🔒
 
