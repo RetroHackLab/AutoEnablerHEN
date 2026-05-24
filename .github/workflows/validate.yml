@@ -1,0 +1,32 @@
+name: 🛡️ AutoEnabler HEN Safety Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 🏗️ Execute AutoHEN Matrix Build
+      run: |
+        python main.py build
+
+    - name: 🌍 Validate Multi-language Matrix
+      run: |
+        python main.py test-lang
+
+    - name: 🔒 Enforce User-Space Safety Check
+      run: |
+        python main.py export-pkg
