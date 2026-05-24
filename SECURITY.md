@@ -11,7 +11,9 @@ The application operates strictly within **User-Space** and exclusively targets 
 If you discover a critical bug, a boot freeze, or any abnormal behavior that could lead to console stability issues or user data corruption:
 
 1. **Do NOT** open a public GitHub Issue. This helps keep the repository stable and protects the community.
-2. Send a detailed report via a private message directly on **Reddit** to the core developer: [One_Status_8555](https://reddit.com).
+2. Send a detailed report via a private message directly on **Reddit** to the core developer: [Omar [Retro HackLab]/One_Status_8555
+
+](https://www.reddit.com/user/One_Status_8555/).
 3. Please include your generated `autohen.cfg` file, your active PS3 HFW firmware version, the HEN version, and any active background plugins (like webMAN MOD).
 
 We will analyze your report as an academic case study and update the anti-bootloop logic in our safety validator accordingly. ⚡
